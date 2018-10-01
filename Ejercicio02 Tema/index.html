@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Ejercicio02 Enlaces</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+</head>
+
+<!--Etiqueta body-->
+<!--Poner imagen de fondo background-color: para un color, para imagen background-image: url('') con comilla simple  -->
+<!--background-repeat: con este atributo podemos posicionar la imagen del fondo-->
+<!--background-position: center: Para centrar la imagen-->
+<!--background-attachment: fixed: Para cuando hacemos scroll no se mueva la imagen-->
+<!--background-size: cover: Ajusta la imagen a toda la pantalla-->
+    <!--<body style="background-image: url('carpeta/iconopc.png'); 
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover">-->
+
+<!--Lo anterior en una sola línea body-->
+
+<!--<body style="background: url('carpeta/iconopc.png') no-repeat center center fixed">-->
+
+    <body>
+    <!--Enlaces-->
+
+        <a href="http://www.google.es" target="_blank" hreflang="es" rel="next" type="text/html">Google</a>
+        <a href="nueva.html">Ir a Nueva</a>
+        <a href="carpeta/datos.html">Ir a Datos</a>
+        <a href="nueva.html#final" target="_blank">Ir al final de Nueva</a>
+
+        <!--Poner Imagenas, alt es para poenr texto alternativo-->
+        <!--Atributos img, width y height en HTML 5 no se usan, se usan con CSS-->
+        <!--map: Regiones en la imagen-->
+
+        <img src="carpeta/images.png" alt="Google developer" style=" width: 250px; height: 250px;" usemap="formas" ismap="ismap">
+        <map name="formas" id="formas">
+            <!--rect: rectangulo, circle: Circulo-->
+            <area shape="rect" coords="61,20,162,99" href="http://www.google.es">
+            <area shape="circle" coords="112,156,30" href="http://www.wikipedia.org">
+        <!--Poly: Para dibujar y unir varios puntos-->
+            <img src="carpeta/iconopc.png" alt="Google developer" style=" width: 250px; height: 250px;" usemap="formas" ismap="ismap">
+            <area shape="poly" coords="104,37,165,160,41,157" href="https://www.amazon.es">
+        </map>
+    </body>
+
+</html>
