@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>TABLAS</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+</head>
+    <body>
+
+        <!--Crear tabla- tr son filas y td columnas-->
+        <!--Atributos: border: Poner bordes a la tabla-->
+        <!--Poner cabecera: th-->
+        <!--Pner titulo: caption-->
+        <!--Encabezado de la tabla: thead - Cuerpo tabla: tbody-->
+        
+        
+        <table style="border: 1px solid blue; border-collapse: collapse; margin: 60px; background: red" rules="groups">
+        <caption>Días de la Semana</caption>
+            <thead>
+                    <tr style="border: 2px solid orangered">
+                             <th style="padding: 55px">Lunes</th>
+                            <th>Martes</th>
+                            <th>Miercoles</th>
+                    </tr>
+            </thead>
+
+            <tbody>
+            <tr>
+                <td rowspan="2" style="border: 1px solid black">1</td>
+                <td colspan="2" style="border: 1px solid black">2</td>
+            </tr>
+
+            <tr>
+                    <td>5</td>
+                    <td><table style="border: 1px solid blue; border-collapse: collapse" rules="groups">
+                            <caption>Días de la Semana</caption>
+                                <thead>
+                                        <tr style="border: 2px solid orangered">
+                                                 <th>Lunes</th>
+                                                <th>Martes</th>
+                                                <th>Miercoles</th>
+                                        </tr>
+                                </thead>
+                    
+                                <tbody>
+                                <tr>
+                                    <td rowspan="2" style="border: 1px solid black">1</td>
+                                    <td colspan="2" style="border: 1px solid black">2</td>
+                                </tr>
+                    
+                                <tr>
+                                        <td>5</td>
+                                        <td>6</td>
+                                </tr>
+                            </tbody>
+                            <tfoot>
+                                    <td>100</td>
+                                    <td>200</td>
+                                    <td>300</td>
+                            </tfoot>
+                    
+                            </table></td>
+            </tr>
+        </tbody>
+        <tfoot>
+                <td>100</td>
+                <td>200</td>
+                <td>300</td>
+        </tfoot>
+
+        </table>
+
+
+
+
+
+
+
+
+    
+    </body>
+</html>
