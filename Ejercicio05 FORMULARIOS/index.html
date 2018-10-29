@@ -6,20 +6,127 @@
 </head>
 
 <body>
+ 
+    <!--Form: con dos atribbutos importantes
+    action: donde vamos a enviar toda la información del formulario
+    Metodo: mthod="GET" si lo ponemos con esto, la información se va a ver en la url del campo donde hayamos escrito.
+    mthod="POST" La información no se ve en la url.
+    -->
 
-    <section>
+<form action="gestiondatos.jsp" method="GET">
+    <!--Poner un cuadrado al rededor del formulario-->
+    <fieldset>
+        <legend>Datos Usuario</legend>
+    <!--Type="Text" para que se esriba en al caja textos-->
+    <!--placeholder="Ejemplo" Esto pone un texto de ejemplo dentro del recuadro-->
+    <!--Value: se queda en blanco para dejar el recuadro en blanco, si pones un texto sale por defecto en el caja-->
+    <!--Tamaño de la caja size"100" y Maximo de caracteres maxlength="20" -->
+    <!--label: -->
+    <!--Name: recuperar el ocntendido del campo por su nombre orientado a programación-->
+    <label for="nombre">Nombre de usuario:</label>
+    <!--pattern: para cumplir un patron en este caso solo puede escribir letras mayuculas de a [A-Z], 5 letras, numeros del 0-9 [0-9] y solo 3 numeros {3}-->
+    <input type="text" value="" name="nombre" id="nombre" placeholder="Nombre de usuario" size="100" maxlength="20" pattern="[A-Z]{5}[0-9]{3}"/>
+    <br/>
+    <!--type="password" Para poner contraseñas en las cajas-->
+    <!--Los formularios con contraseña es recomendable enviarlos con POST-->
+    <label for="nombre">contraseña:</label>
+    <input type="password" name="pass"/>
+    <br/>
+    <!--El button va a hacer uan llamada a un metodo de Javascript-->
+    <input type="button" value="Pulsar"/>
+    <br/>
+    <!--Sirve para borrar el contenido del formulario-->
+    <input type="reset" value="Borrar">
+    <br/>
+    <!--type="submit" para enviar la información-->
+    <input type="submit" value="Enviar">
+    <br/>
+    <!--Los radios tienen que tener el mismo name para que sean de las misma regunta-->
+    <!--Marcar uno por defecto: checked="checked"-->
+    <label for="pregunta">Alumno?</label>
+    <input type="radio" name="Pregunta" value="S" checked="checked"/>Si
+    <input type="radio" name="Pregunta" value="N"/>No
+    <br/>
+    <!--Casilla de berificación-->
+    <label>Aficiones:</label>
+    <input type="checkbox" name="Futbol" value="f"/>Fútbol
+    <input type="checkbox" name="Cine" value="c"/>Cine
+    <br/>
+    <!--Desplegables-->
+    <label for="provincias">Provincias</label>
+    <select name="provincias">
+        <!--optgroup: para hacer grupos dentro del desplegable-->
+        <optgroup label="Unos">
+        <option value="SE">Sevilla</option>
+        </optgroup>
+        <optgroup label="Otros">
+        <option value="CA">Cádiz</option>
+        <option value="HU">Huelva</option>
+        </optgroup>
+    </select>
+    <br/>
+    <!--Para seleccionar el archivo a subir-->
+    <input type="file" name="archivo"/>
+    <br>
+    Campo de texto:
+    <textarea name="descripcion" rows="10" cols="50" maxlength="20"> </textarea>
+    
+</fieldset>
+</form>
 
-        <form method="GET">
-            <p>Texto dentro del formulario</p>
-            <p>
-               <label>Nombre Usuario</label> <input  type="text" name="Nombre"/></code>
-            </p>
-        </form>
+<br/>
 
-        <!--Web Guia: https://openclassrooms.com/en/courses/3339201-aprende-a-crear-tu-propio-sitio-web-con-html5-y-css3/3350285-formularios-->
+<form>
+<!-- botones con número y Para moviles-->
+<input type="number" maxlength="5"  min="1" max="10">
+<br/>
+<!--Para enviar el email-->
+<input type="email"/>
+<br/>
+<!--Para direccioens url-->
+<input type="url"/>
+<br/>
+<input type="submit"/>
+<!-- Poner Fecha-->
+Fecha:
+<input type="date"/>
+<br/>
+<!--Hora-->
+Hora:
+<input type="time"/>
+<br/>
+<!--Fecha y Hora-->
+Fecha y Hora:
+<input type="datetime"/>
+<br/>
+<!--Meses-->
+Meses:
+<input type="month"/>
+<br/>
+<!--Cuadro de texto para hcer busquedas-->
+busqueda:
+<input type="search"/>
+<br/>
+<!--Para poner el telefono-->
+<input type="tel"/>
+<br/>
+<!--Poner una barra deslizante-->
+<input type="range" min="100" max="100" step="2"/>
+<br>
+<!--Poner un cuadro para elegir color-->
+<input type="color">
+
+<!--Poner campo obligatorio con: required="required"-->
+
+</form>
+        
 
 
-    </section>
+    
     
 </body>
 </html>
+
+
+
+<!--Web Guia: https://openclassrooms.com/en/courses/3339201-aprende-a-crear-tu-propio-sitio-web-con-html5-y-css3/3350285-formularios-->
