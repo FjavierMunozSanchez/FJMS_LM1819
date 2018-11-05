@@ -2,11 +2,13 @@
 <html>
 <head>
     <meta charset="utf-8" />
-    <title>EJERCICIO05 FORMULARIO</title>
+    <title>EJERCICIO05 Y 06 FORMULARIO</title>
 </head>
 <body>
 
-<form action="" method="GET">
+<!--Ejercici05-->
+<p>EJERCICIO05. Crea una página web que contenga un formulario con los siguientes campos de información:</p>
+<form action="" method="GET" name="Formulario de prueba de HTML5">
 
     <!--Nombre-->
     <label for="nombre">Nombre:</label>
@@ -71,12 +73,83 @@
 <br/>
     <!--Enviar-->
     <input type="submit" name="Enviar" id="Enviar">
-
-
-
-
 </form>
 
+<br/>
+<!--Ejercicio06-->
+<p>EJERCICIO06. Crear un formulario, del tema que prefieras, que contenga lo siguiente: </p>
+<form>
+
+<fieldset>
+<legend>Curriculum Programador Web:</legend>
+
+<!--Nombre-->
+<label>Nombre:</label>
+<input type="text" name="Nombre" id="Nombre">
+<br/>
+<br/>
+<!--DNI-->
+<label>DNI:</label>
+<input type="text" name="dni" id="dni" placeholder="XXXXXXXXN" maxlength="9" pattern="[0-9]{8}[A-Z]{1}">
+<br/>
+<br/>
+<!--Edad-->
+    <label>Edad:</label>
+    <input type="number" min="0" max="100"/>
+<br/>
+<br/>
+    <!--Fecha Nacimiento-->
+    Fecha Nacimiento:
+    <input type="date"/>
+<br/>
+<br/>
+    <!--URL-->
+    <label>Página Web:</label>
+    <input type="url" name="URL" id="URL" placeholder="URL"/>
+<br/>
+<br/>
+    <!--Hora-->
+     Hora:
+    <input type="time"/>
+<br/>
+<br/>
+    <!--Fecha y Hora-->
+    Fecha y Hora:
+    <input type="datetime"/>
+<br/>
+<br/>
+    <!--Meses-->
+    Meses:
+    <input type="month"/>
+<br/>
+<br/>
+    <!--Cuadro de texto para hacer busquedas-->
+    busqueda:
+    <input type="search"/>
+<br/>
+<br/>
+    <!--Para poner el telefono-->
+    Télefono:
+    <input type="tel"/>
+<br/>
+<br/>
+    <!--Poner una barra deslizante-->
+    Range:
+    <input type="range" min="100" max="100" step="2"/>
+<br/>
+<br/>
+    <!--Poner un cuadro para elegir color-->
+    Color:
+    <input type="color">
+<br/>
+<br/>
+    <!--Para enviar el email-->
+    Enviar:
+    <input type="submit"/>
+
+</fieldset>
+
+</form>
 
 
     
