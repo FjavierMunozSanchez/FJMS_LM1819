@@ -8,16 +8,23 @@
 
 <!--Ejercici05-->
 <p>EJERCICIO05. Crea una página web que contenga un formulario con los siguientes campos de información:</p>
-<form action="" method="GET" name="Formulario de prueba de HTML5">
+
+
+<form action="" method="GET" name="Formulario de prueba de HTML5" style="margin: 0">
 
     <!--Nombre-->
+    
     <label for="nombre">Nombre:</label>
-    <input type="text" value="" name="nombre" id="nombre" maxlength="20" pattern="[A-Z]{5}[0-9]{3}"/>
+    
+    
+    <input type="text" value="" name="nombre" id="nombre" maxlength="20" pattern="[A-Z]{5}[0-9]{3}" autofocus required="required">
+
+
 <br/>
 <br/>
     <!--Correo electrónico-->
     <label>Correo Electrónico:</label>
-    <input type="email" name="email" id="email"/>
+    <input type="email" name="email" id="email" required/>
 <br/>
 <br/>
     <!--URL-->
@@ -72,7 +79,7 @@
 <br/>
 <br/>
     <!--Enviar-->
-    <input type="submit" name="Enviar" id="Enviar">
+    <input type="submit" name="Enviar" id="Enviar" value="Enviar">
 </form>
 
 <br/>
@@ -103,6 +110,22 @@
     <input type="date"/>
 <br/>
 <br/>
+    <!--Daralist-->
+    <label>Lugar de nacimiento</label>
+    <input list="Provincias">
+     
+    <datalist id="Provincias">
+        <option value="Almería">
+        <option value="Cádiz">
+        <option value="Córdoba">
+        <option value="Granada">
+        <option value="Huelva">
+        <option value="Jaén">
+        <option value="Málaga">
+        <option value="Sevilla"></option>
+    </datalist>
+<br/>
+<br/>
     <!--URL-->
     <label>Página Web:</label>
     <input type="url" name="URL" id="URL" placeholder="URL"/>
@@ -124,7 +147,7 @@
 <br/>
 <br/>
     <!--Cuadro de texto para hacer busquedas-->
-    busqueda:
+    Busqueda:
     <input type="search"/>
 <br/>
 <br/>
@@ -134,17 +157,36 @@
 <br/>
 <br/>
     <!--Poner una barra deslizante-->
-    Range:
-    <input type="range" min="100" max="100" step="2"/>
+    Habilidad:
+    <input type="range" min="1" max="100" step="2" value="1"/>
 <br/>
 <br/>
     <!--Poner un cuadro para elegir color-->
-    Color:
+    Color favorito:
     <input type="color">
 <br/>
 <br/>
-    <!--Para enviar el email-->
-    Enviar:
+<!--Caja de texto-->
+<label>Descripcion de tus habilidades:</label>
+<br/>
+    <textarea name="descripcion" rows="10" cols="50" maxlength="20" placeholder="Maximo 20 letras" autofocus required="required" autocomplete="on"> </textarea>
+<br/>
+<br/>
+<!--Caja de tosto con números-->
+<label>Caja de texto solo Números:</label>
+<input type="number" min="0" max="10">
+<br/>
+<br/>
+<!--Para seleccionar el archivo a subir-->
+<label>Tu Foto:</label>
+<input type="file" name="archivo" value="Subir imagen"/>
+<br/>
+<br/>
+<label for="name">Contraseña:</label>
+<input type="password" name="pass"/>
+<br/>
+<br/>
+    <!--Para enviar Formulario a un correo-->
     <input type="submit"/>
 
 </fieldset>
