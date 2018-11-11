@@ -85,113 +85,210 @@
 <br/>
 <!--Ejercicio06-->
 <p>EJERCICIO06. Crear un formulario, del tema que prefieras, que contenga lo siguiente: </p>
-<form>
+<form action="" method="GET" name="Formulario de prueba de HTML5" style="margin: 0">
 
-<fieldset>
-<legend>Curriculum Programador Web:</legend>
+        <fieldset>
+            <legend>Curriculum Programador Web:</legend>
+    
+            <table>
+                <!--Nombre-->
+                <tr>
+                    <td style="width: 150px; height: 30px">
+                    <label>Nombre:</label>
+                    </td>
+                    <td>
+                    <input type="text" name="Nombre" id="Nombre" size="30">
+                    </td>
+                </tr>
+    
+                <!--DNI-->
+                <tr>
+                    <td style="width: 150px; height: 30px">
+                    <label>DNI:</label>
+                    </td>
+                    <td>
+                    <input type="text" name="dni" id="dni" placeholder="XXXXXXXXN" maxlength="9" pattern="[0-9]{8}[A-Z]{1}" size="30">
+                    </td>
+                </tr>
+    
+                <!--Edad-->
+                <tr>
+                    <td style="width: 150px; height: 30px">
+                    <label>Edad:</label>
+                    </td>
+                    <td>
+                    <input type="number" min="0" max="100"/>
+                    </td>
+                </tr>
+    
+                <!--Fecha Nacimiento-->
+                <tr>
+                    <td style="width: 150px; height: 30px">
+                    <label>Fecha Nacimiento:</label>
+                    </td>
+                    <td>
+                    <input type="date"/>
+                    </td>
+                </tr>
+    
+                <!--Daralist-->
+                <tr>
+                    <td style="width: 150px; height: 30px">
+                    <label>Lugar de nacimiento:</label>
+                    </td>
+                    <td>
+                    <input list="Provincias" size="30"/>
+         
+                        <datalist id="Provincias">
+                            <option value="Almería">
+                            <option value="Cádiz">
+                            <option value="Córdoba">
+                            <option value="Granada">
+                            <option value="Huelva">
+                            <option value="Jaén">
+                            <option value="Málaga">
+                            <option value="Sevilla"></option>
+                        </datalist>
+                    </td>
+                </tr>
+    
+                <!--URL-->
+                <tr>
+                    <td style="width: 150px; height: 30px">
+                    <label>Página Web:</label>
+                    </td>
+                    <td>
+                    <input type="url" name="URL" id="URL" placeholder="URL" size="30"/>
+                    </td>
+                </tr>
+    
+                <!--Hora-->
+                <tr>
+                    <td style="width: 150px; height: 30px">
+                    <label>Hora:</label>
+                    </td>
+                    <td>
+                    <input type="time"/>
+                    </td>
+                </tr>
+    
+                <!--Fecha y Hora-->
+                <tr>
+                    <td style="width: 150px; height: 30px">
+                    <label>Fecha y Hora:</label>
+                    </td>
+                    <td>
+                    <input type="datetime" size="30"/>
+                    </td>
+                </tr>
+    
+                <!--Meses-->
+                <tr>
+                    <td style="width: 150px; height: 30px">
+                    <label>Mes:</label>
+                    </td>
+                    <td>
+                    <input type="month"/>
+                    </td>
+                </tr>
+    
+                <!--Cuadro de texto para hacer busquedas-->
+                <tr>
+                    <td style="width: 150px; height: 30px">
+                    <label>Busqueda:</label>
+                    </td>
+                    <td>
+                    <input type="search" size="30"/>
+                    </td>
+                </tr>
+    
+                 <!--Para poner el telefono-->
+                 <tr>
+                    <td style="width: 150px; height: 30px">
+                    <label>Télefono:</label>
+                    </td>
+                    <td>
+                    <input type="tel" size="30"/>
+                    </td>
+                </tr>
+    
+                <!--Poner una barra deslizante-->
+                <tr>
+                        <td style="width: 150px; height: 30px">
+                        <label>Experiencia:</label>
+                        </td>
+                        <td>
+                        Baja<input type="range" min="1" max="100" step="2" size="30"/>Alta
+                        </td>
+                    </tr>
+    
+                <!--Poner un cuadro para elegir color-->
+                <tr>
+                    <td style="width: 150px; height: 30px">
+                    <label>Color favorito:</label>
+                    </td>
+                    <td>
+                    <input type="color">
+                    </td>
+                </tr>
+    
+                <!--Caja de texto con números-->
+                <tr>
+                    <td style="width: 150px; height: 30px">
+                    <label>Número favorito:</label>
+                    </td>
+                     <td>
+                    <input type="number" min="0" max="10">
+                    </td>
+                </tr>
+    
+                <!--Poner un cuadro para elegir color-->
+                <tr>
+                    <td style="width: 150px; height: 30px">
+                    <label>Otras habilidades:</label>
+                    </td>
+                    <td>
+                    <textarea name="descripcion" rows="10" cols="50" maxlength="20" placeholder="Maximo 20 letras" autofocus required="required" autocomplete="on"> </textarea>
+                    </td>
+                </tr>
+    
+                <!--Caja de texto con números-->
+                <tr>
+                    <td style="width: 150px; height: 30px">
+                    <label>Sube tu foto:</label>
+                    </td>
+                    <td>
+                    <input type="file" name="archivo" value="Subir imagen"/>
+                    </td>
+                    </tr>
+    
+                    <!--Caja de Contraseña-->
+                <tr>
+                    <td style="width: 150px; height: 30px">
+                    <label for="name">Contraseña usuario:</label>
+                    </td>
+                    <td>
+                    <input type="password" name="pass" size="30px"/>
+                    </td>
+                </tr>
 
-<!--Nombre-->
-<label>Nombre:</label>
-<input type="text" name="Nombre" id="Nombre">
-<br/>
-<br/>
-<!--DNI-->
-<label>DNI:</label>
-<input type="text" name="dni" id="dni" placeholder="XXXXXXXXN" maxlength="9" pattern="[0-9]{8}[A-Z]{1}">
-<br/>
-<br/>
-<!--Edad-->
-    <label>Edad:</label>
-    <input type="number" min="0" max="100"/>
-<br/>
-<br/>
-    <!--Fecha Nacimiento-->
-    Fecha Nacimiento:
-    <input type="date"/>
-<br/>
-<br/>
-    <!--Daralist-->
-    <label>Lugar de nacimiento</label>
-    <input list="Provincias">
-     
-    <datalist id="Provincias">
-        <option value="Almería">
-        <option value="Cádiz">
-        <option value="Córdoba">
-        <option value="Granada">
-        <option value="Huelva">
-        <option value="Jaén">
-        <option value="Málaga">
-        <option value="Sevilla"></option>
-    </datalist>
-<br/>
-<br/>
-    <!--URL-->
-    <label>Página Web:</label>
-    <input type="url" name="URL" id="URL" placeholder="URL"/>
-<br/>
-<br/>
-    <!--Hora-->
-     Hora:
-    <input type="time"/>
-<br/>
-<br/>
-    <!--Fecha y Hora-->
-    Fecha y Hora:
-    <input type="datetime"/>
-<br/>
-<br/>
-    <!--Meses-->
-    Meses:
-    <input type="month"/>
-<br/>
-<br/>
-    <!--Cuadro de texto para hacer busquedas-->
-    Busqueda:
-    <input type="search"/>
-<br/>
-<br/>
-    <!--Para poner el telefono-->
-    Télefono:
-    <input type="tel"/>
-<br/>
-<br/>
-    <!--Poner una barra deslizante-->
-    Habilidad:
-    <input type="range" min="1" max="100" step="2" value="1"/>
-<br/>
-<br/>
-    <!--Poner un cuadro para elegir color-->
-    Color favorito:
-    <input type="color">
-<br/>
-<br/>
-<!--Caja de texto-->
-<label>Descripcion de tus habilidades:</label>
-<br/>
-    <textarea name="descripcion" rows="10" cols="50" maxlength="20" placeholder="Maximo 20 letras" autofocus required="required" autocomplete="on"> </textarea>
-<br/>
-<br/>
-<!--Caja de tosto con números-->
-<label>Caja de texto solo Números:</label>
-<input type="number" min="0" max="10">
-<br/>
-<br/>
-<!--Para seleccionar el archivo a subir-->
-<label>Tu Foto:</label>
-<input type="file" name="archivo" value="Subir imagen"/>
-<br/>
-<br/>
-<label for="name">Contraseña:</label>
-<input type="password" name="pass"/>
-<br/>
-<br/>
-    <!--Para enviar Formulario a un correo-->
-    <input type="submit"/>
-
-</fieldset>
-
-</form>
+                <!--Enviar-->
+                <tr>
+                    <td style="width: 150px; height: 30px">
+                    <input type="submit" name="Send"/>
+                    </td>
+                    <td>
+                    </td>
+                </tr>
+    
+    
+            </table>
+    
+    
+    
+        </fieldset>
+    
+    </form>
 
 
     
