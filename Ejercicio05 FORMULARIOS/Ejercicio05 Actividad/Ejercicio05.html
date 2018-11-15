@@ -12,74 +12,139 @@
 
 <form action="" method="GET" name="Formulario de prueba de HTML5" style="margin: 0">
 
-    <!--Nombre-->
-    
-    <label for="nombre">Nombre:</label>
-    
-    
-    <input type="text" value="" name="nombre" id="nombre" maxlength="20" pattern="[A-Z]{5}[0-9]{3}" autofocus required="required">
+    <table>
+            <!--Nombre-->
+            <tr>
+                <td style="width: 150px; height: 30px">
+                <label for="nombre">Nombre:</label>
+                </td>
+                <td>
+                <input type="text" value="" name="nombre" id="nombre" maxlength="20" pattern="[A-Z]{5}[0-9]{3}" autofocus required="required">
+                </td>
+            </tr>
 
+            <!--Correo electrónico-->
+            <tr>
+                <td style="width: 150px; height: 30px">
+                <label>Correo Electrónico:</label>
+                </td>
+                <td>
+                <input type="email" name="email" id="email" required/>
+                </td>
+            </tr>
 
-<br/>
-<br/>
-    <!--Correo electrónico-->
-    <label>Correo Electrónico:</label>
-    <input type="email" name="email" id="email" required/>
-<br/>
-<br/>
-    <!--URL-->
-    <label>URL:</label>
-    <input type="url" name="URL" id="URL" placeholder="Escribe la URL de tu página Web"/>
-<br/>
-<br/>
-    <!--Fecha-->
-    <label>Fercha:</label>
-    <input type="date" name="Fecha" id="Fecha"/>
-<br/>
-<br/>
-    <!--Tiempo-->
-    <label>Tiempo:</label>
-    <input type="time" name="Tiempo" id="Tiempo"/>
-<br/>
-<br/>
-    <!--Fecha y Hora-->
-    <label>Fecha y Hora:</label>
-    <input type="date" name="Fecha" id="Fecha"/>
-    <input type="time" name="Hora" id="Hora"/>
-<br/>
-<br/>
-    <!--Mes-->
-    <label>Mes:</label>
-    <input type="month" name="Mes" id="Mes"/>
-<br/>
-<br/>
-    <!--Semana-->
-    <label>Semana:</label>
-    <input type="week" name="Semana" id="Semana"/>
-<br/>
-<br/>
-    <!--Numero (min -10, max 10)-->
-    <label>Numero (min -10, max 10):</label>
-    <input type="number"  min="-10" max="10">
-<br/>
-<br/>
-    <!--Teléfono-->
-    <label>Teléfono:</label>
-    <input type="tel" name="Teléfono" id="Teléfono">
-<br/>
-<br/>
-    <!--Término de búsqueda-->
-    <label>Término de búsqueda:</label>
-    <input type="search" name="búsqueda" id="Búsqueda">
-<br/>
-<br/>
-    <!--Color favorito-->
-    <label>Color favorito:</label>
-    <input type="color" name="Colores" id="Colores">
-<br/>
-<br/>
-    <!--Enviar-->
-    <input type="submit" name="Enviar" id="Enviar" value="Enviar">
+            <!--URL-->
+            <tr>
+                <td style="width: 150px; height: 30px">
+                <label>URL:</label>
+                </td>
+                <td>
+                <input type="url" name="URL" id="URL" placeholder="Escribe la URL de tu página Web"/>
+                </td>
+            </tr>
+
+            <!--Fecha-->
+            <tr>
+                <td style="width: 150px; height: 30px">
+                <label>Fercha:</label>
+                </td>
+                <td>
+                <input type="date" name="Fecha" id="Fecha"/>
+                </td>
+            </tr>
+
+            <!--Tiempo-->
+            <tr>
+                <td style="width: 150px; height: 30px">
+                <label>Tiempo:</label>
+                </td>
+                <td>
+                <input type="time" name="Tiempo" id="Tiempo"/>
+                </td>
+            </tr>
+
+            <!--Fecha y Hora-->
+            <tr>
+                <td style="width: 150px; height: 30px">
+                <label>Fecha y Hora:</label>
+                </td>
+                <td>
+                <input type="date" name="Fecha" id="Fecha"/>
+                <input type="time" name="Hora" id="Hora"/>
+                </td>
+            </tr>
+
+            <!--Mes-->
+            <tr>
+                <td style="width: 150px; height: 30px">
+                <label>Mes:</label>
+                </td>
+                <td>
+                <input type="month" name="Mes" id="Mes"/>
+                </td>
+            </tr>
+
+            <!--Semana-->
+            <tr>
+                <td style="width: 150px; height: 30px">
+                <label>Semana:</label>
+                </td>
+                <td>
+                <input type="week" name="Semana" id="Semana"/>
+                </td>
+            </tr>
+
+            <!--Numero (min -10, max 10)-->
+            <tr>
+                <td>
+                <label>Numero (min -10, max 10):</label>
+                </td>
+                <td>
+                <input type="number"  min="-10" max="10">
+                </td>
+            </tr>
+
+            <!--Teléfono-->
+            <tr>
+                <td style="width: 150px; height: 30px">
+                <label>Teléfono:</label>
+                </td>
+                <td>
+                <input type="tel" name="Teléfono" id="Teléfono">
+                </td>
+            </tr>
+
+             <!--Término de búsqueda-->
+             <tr>
+                <td style="width: 150px; height: 30px">
+                <label>Término de búsqueda:</label>
+                </td>
+                <td>
+                <input type="search" name="búsqueda" id="Búsqueda">
+                </td>
+            </tr>
+
+            <!--Color favorito-->
+            <tr>
+                    <td style="width: 150px; height: 30px">
+                    <label>Color favorito:</label>
+                    </td>
+                    <td>
+                    <input type="color" name="Colores" id="Colores">
+                    </td>
+                </tr>
+
+            <!--Enviar-->
+            <tr>
+                <td style="width: 150px; height: 30px">
+                <input type="submit" name="Enviar" id="Enviar" value="Enviar">
+                </td>
+                <td>
+                </td>
+            </tr>
+
+    </table>
+
 </form>
 
 <br/>
@@ -198,7 +263,7 @@
                     <label>Busqueda:</label>
                     </td>
                     <td>
-                    <input type="search" size="30"/>
+                    <input type="search" size="30" placeholder="Busca tu web aquí"/>
                     </td>
                 </tr>
     
