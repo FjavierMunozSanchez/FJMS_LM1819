@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>EXAMEN HTML</title>
+</head>
+<body>
+
+<p>
+<span style="font-style: italic">text enfatizado</span><br>
+<span style="font-weight: bold">text enfatizado</span><br>
+<em>Texto definición</em><br>
+<span style="font-family: 'Courier New', Courier, monospace">Texto código fuente de ordenador</span><br>
+<span style="font-family: 'Courier New', Courier, monospace">Texto ejemplo de código fuente de ordenador</span><br>
+<span style="font-family: 'Courier New', Courier, monospace">Texto de teclado</span><br>
+<span style="font-style: italic">Variable</span><br>
+<span>Esta línea se muestra un <s>texto tachado y se simula</s>&nbsp<u>una correción</u></span><br>
+<span style="font-style: italic"><q>Esto es una cita Cita</q></span><br>
+<span>Este texto más grande <span style="font-size: 8px">Este texto más pequeño</span></span><br>
+<span>En esta línea tenemos <sup>texto en superíndice</sup> y <sub>texto en subindice</sub> </span><br>
+<pre>El texto en una etiqueta "pre" mantiene los espacios       y
+    saltos de línea.
+</pre>
+</p>
+
+<br>
+
+<!--Lista de enlaces-->
+
+<table style="height: 183px; width: 500px; border-collapse:collapse">
+        <tbody style="background-color: yellow">
+        <tr>
+        <td style="width: 208px;"><p style="text-align: center; font-weight: bold; font-size: 30px; color: orange">Listas de enlaces</p></td>
+        </tr>
+        <tr>
+        <td style="width: 208px;">
+                <ul>
+                
+                <li>Buscadores</li>
+                    <ul>
+                        <li><a href="https://www.bing.com/?setlang=es" target="_blank" hreflang="es" rel="next" type="text/html" style="color: purple">Bing</a></li>
+                        <li><a href="http://www.google.es" target="_blank" hreflang="es" rel="next" type="text/html" style="color: green">Google</a></li>
+                    </ul>
+                    <li>Redes sociales</li>
+                    <ul>
+                        <li><a href="https://es-es.facebook.com/" target="_blank" hreflang="es" rel="next" type="text/html" style="color: red">Facebook</a></li>
+                        <li><a href="https://twitter.com/?lang=es" target="_blank" hreflang="es" rel="next" type="text/html" style="color: red">Twitter</a></li>
+                    </ul>
+                    </ul>
+        </tbody>
+        </table>
+
+<br>
+
+<table style="height: 242px; width: 512px;">
+        <thead>
+        <tr style="height: 51px;">
+        <td style="width: 511px; height: 51px;" colspan="2"><h2 style="text-align: left">Encanezado Izquierda</h2></td>
+        </tr>
+        </thead>
+        <tbody>
+        <tr style="height: 121px;">
+        <td style="width: 198px; height: 121px; margin: 50px"><img src="mar.jpg" alt="MAR" style=" width: 250px; height: 250px;" ></td>
+        <td style="width: 313px; height: 121px; vertical-align: top;">La musica es, segun la definición tradicional del termino, el arte de organizar sensible y lógicamente una combinación coherente.</td>
+        </tr>
+        <tfoot>
+            <tr>
+                <td>Fig. 1 descripción de la imagen</td>
+            </tr>
+        </tfoot>
+        </tbody>
+        </table>
+<br>
+<br>
+<br>
+
+<!--Formularios-->
+
+
+<form action="" method="GET" name="Formulario de prueba de HTML5" style="margin: 0">
+<table style="height: 286px;" width="400px; border-collapse;">
+        <tbody>
+        <tr>
+        <td style="width: 220px"><label for="nombre">Asunto:</label></td>
+        <td style="width: 185px;"><input type="text" value="" name="nombre" id="nombre" maxlength="20" autofocus size="30"></td>
+        </tr>
+        <tr>
+            <td style="width: 220px;"><label for="nombre" required="required">Primer Apellido:</label></td>
+            <td style="width: 185px;"><input type="text" value="" name="Apellido1" id="Apellido1" maxlength="20" size="30"></td>
+        </tr>
+        <tr>
+            <td style="width: 220px;"><label for="nombre">Segundo Apellido:</label></td>
+            <td style="width: 185px;"><input type="text" value="" name="Apellido2" id="Apellido2" maxlength="20" size="30"></td>
+        </tr>
+        <tr>
+        <td style="width: 220px;"><label for="nombre">Nombre:</label></td>
+        <td style="width: 185px;"><input type="text" name="Nombre" id="Nombre" size="30" required></td>
+        </tr>
+        <tr>
+        <td style="width: 220pxx;">DNI</td>
+        <td style="width: 185px;"><input type="text" name="dni" id="dni" placeholder="XXXXXXXXN" maxlength="9" pattern="[0-9]{8}[A-Z]{1}" size="30"></td>
+        </tr>
+        <tr>
+        <td style="width: 220px;"><label>Correo Electrónico:</label></td>
+        <td style="width: 185px;"> <input type="email" name="email" id="email" required size="30"/></td>
+        </tr>
+        <tr>
+        <td style="width: 220px;"><label>Teléfono:</label></td>
+        <td style="width: 185px;"><input type="tel" name="Teléfono" id="Teléfono" size="30"></td>
+        </tr>
+        <tr>
+        <td style="width: 220px;"><label>¿Sobre qué?</label></td>
+        <td style="width: 185px;"><input list="pregunta" size="30"/>
+         
+            <datalist id="pregunta">
+                <option value="Literatura">
+                <option value="Arte">
+                <option value="Ciencia">
+                <option value="Cine">
+                <option value="Deporte">
+                <option value="Lgar favorito">
+            </datalist></td>
+        </tr>
+        <tr>
+        <td style="width: 220px;"><label>¿Que va a escribir?</label></td>
+        <td style="width: 185px;">
+                <input list="Asunto" size="30"/>
+         
+                <datalist id="Asunto">
+                    <option value="Critica">
+                    <option value="Comentario">
+                </datalist>
+            </datalist></td>
+        </tr>
+        <tr>
+        <td style="width: 220px; vertical-align: top;"><label>Texto del escrito:</label></td>
+        <td style="width: 185px;"><textarea name="descripcion" rows="10" cols="50" maxlength="20" placeholder="Maximo 20 letras" autofocus required="required" autocomplete="on" required> </textarea></td>
+        </tr>
+
+        <tr>
+                <td style="width: 220px;" colspan="2">Los datos personales facilitados son susceptibles de cesión cuando ésta sea precisa para tramitar su cotestación</td>
+                <td style="width: 185px;">&nbsp;</td>
+                </tr>
+                
+<tr>
+    <td style="width: 220px;"><input type="submit" name="Send"/></td>
+     <td style="width: 185px;">&nbsp;</td>
+    </tr>
+        </tbody>
+        </table>
+
+    </form>
+
+<br>
+<br>
+<br>
+
+<!--CAPAS-->
+
+<div>
+<div style="border: 5px; background: blue; width: 600px;"><span>TÍTULO DE LA PÁGINA</span></div>
+
+<div style="float: left; border: 5px solid gray">
+<div style="border: 5px; background: greenyellow; width: 300px;"><span>CAPA 1</span></div>
+<div style="border: 5px; background: greenyellow; width: 300px"><span>CAPA 2</span></div>
+<div style="border: 5px; background: greenyellow; width: 300px"><span>CAPA 3</span></div>
+<div style="border: 5px; background: greenyellow; width: 300px"><span>CAPA 4</span></div>
+</div>
+
+<div style="float: right: ; margin-left: 50px">
+        <div style="border: 5px; background: blue;  margin: 20px; border: solid 5px gray"><span>CAPA 3</span></div>
+        <div style="border: 5px; background: blue; margin: 20px; border: solid 5px gray"><span>CAPA 4</span></div>
+</div>
+</div>
+
+
+
+
+    
+</body>
+</html>
