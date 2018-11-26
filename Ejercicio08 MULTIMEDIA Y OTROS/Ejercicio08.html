@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>MULTIMEDIS Y OTROS</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <script src="main.js"></script>
+
+    <!--En la cabezera se pueden añadir los styles-->
+    <style type="text/ccs">
+    @media only screen and (max-width: 1500px) and (min-width: 547px) {
+        body {
+            background: blue
+        }
+    }
+
+     @media only screen and (max-width: 794px) and (min-width: 547px) {
+        body {
+            background: red
+        }
+    }
+
+      @media only screen and (max-width: 547px) {
+        body {
+            background: green
+        }
+    }
+
+    @media print {
+        * {
+            font-family: 'Times New Roman', Times, serif'
+        }
+    }
+
+    @media all and (orientation: portrait) {
+        body {
+            font-family: 'Times New Roman', Times, serif'
+        }
+    }
+
+    @media all and (orientation: landscape) {
+        body {
+            font-family: 'Times New Roman', Times, serif'
+        }
+    }
+</style>
+</head>
+<body>
+    <h1>VIDEO</h1>
+    <!--Para insertar vídeos en la página, el navegador solo va a coger un src, se ponen varios con los distintos 
+        formatos para que el navegador eliga el más adecuado-->
+    <!--controls para ponerle los controlesd e reproducción-->
+    <!--Autoplay para reproducir automaticamente-->
+    <!--Loop: para que vuelva a empzar una vez acabado-->
+    <!--Mute: apra repsoducir en silencio-->
+    <!--Preload: para que se carge el bideo completo al cargar la página-->
+    <!--poster: para poenrle una miniatura al vídeo-->
+    <!--En el SRC se pude indicar un apartado de codecs-->
+    <video width="400" height="400" controls>
+        <source src="small.mp4" type="video/mp4; codecs=`avc1.42E01E`"/>
+        <source src="small.webm"/>
+        <source src="small.ogv"/>
+    </video>
+<br/>
+    
+    <h1>AUDIO</h1>
+    <!--Los mismos parametros y condiciones que con la etiqueta video (Controls, autoplay, loop, etc...)-->
+    <audio controls>
+        <source src="sonido.mp3" type="audio/mpeg"/>
+    </audio>
+
+<br/>
+
+<h1>IFRAME</h1> <!--Sirve para incrustar contenido de otras WEBs-->
+<!--Video-->
+<iframe width="560" height="315" src="https://www.youtube.com/embed/E4n7BQkOQ_s" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<br/>
+<!--Mapa-->
+<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d391565.2558678303!2d116.11726575722396!3d39.93907312327024!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x35f05296e7142cb9%3A0xb9625620af0fa98a!2zUGVrw61uLCBDaGluYQ!5e0!3m2!1ses!2ses!4v1543235600159" width="400" height="400" frameborder="0" style="border:0" allowfullscreen></iframe>
+
+<br/>
+<h1>OBJECT</h1>
+<!--Para incrustar un objeto-->
+<object data="rebotes.swf" type="application/x-shockwave-flash">
+    <param name="movie" value="rebotes.swf"/>
+    <param name="quality" value="high">
+    <param name="wmode" value="transparent">
+
+</object>
+
+<h1>DATOS</h1>
+
+<iframe src="datos.html" style="width: 400px height: 400px;"></iframe>
+<br/>
+<!--Esto es lo normal para incrustar cualquier tipo de dato a la web (Puedes incrustar páginas web también)-->
+<object data="datos.html" type="text/html" style="width: 400px height: 400px;"></object>
+
+<!---->
+
+
+
+</body>
+</html>
