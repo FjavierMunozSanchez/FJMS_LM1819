@@ -1,0 +1,23 @@
+
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+#borde {
+    border: 3px solid black;
+}
+
+#cabecera {
+    background-color: rgb(141, 206, 44);
+}
+
+#navegador{
+    width: 100%;
+    background-color: aquamarine;
+}
+#navegador li {
+    border: 1px solid blue;
+    display: inline-block;
+    list-style: none;
+}
