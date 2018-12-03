@@ -1,0 +1,93 @@
+/*Selectores que solo afectan a las etiquetas a y p*/
+
+a, p {
+    font-size: 18px;
+}
+
+/*Todos los enlaces que esten dentro de una capa*/
+
+div a {
+    color: red;
+}
+
+/*todos los div cuyo id sea capa1*/
+
+div#capa1 {
+    background-color: blue;
+}
+
+/**/
+
+.letragrande {
+    font-size: 22px;
+}
+
+.nosubrayado {
+    text-decoration: none;
+}
+
+/*cuando ponemos : es una subclase y se activa el CSS.
+hover: Cuando ponemos el raton encima.
+link: Cuando no hemos visitado el enlace
+visited: Cuando ya hemos visitado el enlace.
+activo:
+*/
+
+div#capa1 a.encima:hover {
+    background: yellow;
+}
+
+/*Subclase con p y miparrafo esto aplica a la primera linea un CSS*/
+
+p#miparrafo:first-line {
+    color: blue;
+}
+
+p#miparrafo:first-letter {
+    color: red;
+    font-size: 30px;
+}
+
+/* con el * esto segnifica que lo aplica a todo*/
+
+div#capa1 * {
+    background: green;
+}
+
+/*Todos los enlaces que esten dentro de una capa padre*/
+
+div > a {
+    font-style: italic;
+}
+
+/*AÑADIR ESTILOS que tiene esa capa con class*/
+
+div.capa2 {
+    border: 1px solid black;
+}
+
+/*El ^ significa comienza - a[atributo$="argumentos"]*/
+
+a[href^="https"] {
+    color: green;
+}
+
+/*Todos los enlaces cuyo todos los enlaces sean PDF*/
+
+a[href$="pdf"] {
+    color: brown;
+}
+
+
+/*El $ significa que termina con*/
+p[aling="center"] {
+    color: blueviolet;
+
+}
+
+/**/
+
+div+p {
+
+    font-size: 50px;
+}
