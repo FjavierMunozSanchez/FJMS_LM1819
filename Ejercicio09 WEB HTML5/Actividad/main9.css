@@ -40,6 +40,39 @@ body {
 }
 
 #cuerpo {
+    float: left;
     background-color: rgb(199, 139, 82);
-    margin: 20px
+    margin: 20px;
+    width: 1400px;
+    height: 700px;
+}
+
+#cuerpo footer {
+    border: 1px solid orange;
+    background-color: orange;
+    margin-top: 20px;
+}
+
+#infopag{
+    border: 1px solid orange;
+    background-color: orange;
+}
+
+#imagen {
+    border: 2px solid orangered;
+    border-radius: 5px 5px 5px 5px;
+    background-color: orangered;
+    height: 200px;
+    margin: 0px auto;
+    margin-top: 20px;
+    margin-bottom: 20px
+
+}
+
+#columna {
+    background-color: white;
+    margin: 20px;
+    float: left;
+    width: 423px;
+    height: 700px;
 }
