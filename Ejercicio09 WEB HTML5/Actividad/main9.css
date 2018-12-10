@@ -9,9 +9,10 @@ body {
 }
 
 #borde {
-    border: 3px solid black;
-    width: 100%;
+    width: 90%;
     height: 100%;
+    margin-right: Auto;
+    margin-left: auto;
 }
 
 #cabecera {
@@ -30,11 +31,12 @@ body {
 }
 
 #navegador{
-    width: 100%;
+    
     background-color: aquamarine;
+    padding: 5px;
 }
 #navegador li {
-    border: 1px solid blue;
+    border-right: 1px solid blue;
     display: inline-block;
     list-style: none;
 }
@@ -43,7 +45,7 @@ body {
     float: left;
     background-color: rgb(199, 139, 82);
     margin: 20px;
-    width: 1400px;
+    width: 800px;
     height: 700px;
 }
 
@@ -73,6 +75,38 @@ body {
     background-color: white;
     margin: 20px;
     float: left;
-    width: 423px;
+    width: 300px;
     height: 700px;
+}
+
+/*SIGUEME*/
+#columna header .filasigueme {
+ background-color: gray;
+
+}
+
+#columna header .fila2 ul li {
+    display: inline-block;
+    width: 100px;
+}
+/*CURSO*/
+
+#columna section .filacurso {
+    background-color: gray;
+    margin-top: 30px;
+}
+
+#columna section article img {
+    width: 300px;
+}
+/*CONTENIDO*/
+
+#columna footer .filacontenido {
+    background-color: gray;
+    margin-top: 30px;
+}
+
+#columna footer article ul {
+    margin-left: 20px;
+    color: blue;
 }
