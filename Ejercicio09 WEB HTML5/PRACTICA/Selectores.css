@@ -28,12 +28,12 @@ div#capa1 {
 
 /*cuando ponemos : es una subclase y se activa el CSS.
 hover: Cuando ponemos el raton encima.
-link: Cuando no hemos visitado el enlace
+link: Cuando no hemos visitado el enlace.
 visited: Cuando ya hemos visitado el enlace.
-actived: Mientras esta siendo selecccinado.
+activo: Mientras esta siendo selecccinado.
 */
 
-div#capa1 a.encima:hover {
+.encima:hover {
     background: yellow;
 }
 
@@ -41,26 +41,26 @@ div#capa1 a.encima:hover {
 
 p#miparrafo:first-line {
     color: blue;
-}
 
+/*Aplica el css a la primera letra del párrafo*/
 p#miparrafo:first-letter {
-    color: red;
-    font-size: 30px;
+        color: red;
+        font-size: 30px;
 }
 
 /* con el * esto segnifica que lo aplica a todo*/
 
-div#capa1 * {
+* {
     background: green;
 }
 
-/*Todos los enlaces que esten dentro de una capa padre*/
+/*Todos los enlaces que esten dentro de una capa padre (En este caso es un div)*/
 
 div > a {
     font-style: italic;
 }
 
-/*AÑADIR ESTILOS que tiene esa capa con class*/
+/*Añadir estilos que tiene esa capa con class*/
 
 div.capa2 {
     border: 1px solid black;
@@ -78,16 +78,17 @@ a[href$="pdf"] {
     color: brown;
 }
 
-
-/*El $ significa que termina con*/
+/*Aplica el CSS al los parrafo cuya alineación sea center*/
 p[aling="center"] {
     color: blueviolet;
 
 }
 
-/**/
+/*Aplicarle estilos a los parrafor que vayan justo detras de un div*/
 
 div+p {
 
     font-size: 50px;
 }
+
+/*Más Selectores: https://code.tutsplus.com/es/tutorials/the-30-css-selectors-you-must-memorize--net-16048 */

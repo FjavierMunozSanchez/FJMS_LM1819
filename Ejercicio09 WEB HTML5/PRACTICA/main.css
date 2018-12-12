@@ -1,0 +1,92 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+
+/*Con el width y el margin auto conseguimos que la pagina sea de acho fijo*/
+#contenedor {
+    width: 1000px;
+    margin-left: 500px; /*auto*/
+    border: 3px solid black;
+    background-color: yellow;
+    float: left; /*Esto es una chapuzilla*/
+	
+}
+
+header, section, aside, nav, article {
+    display: block;
+} 
+
+#cabecera {
+    background-color: rgb(141, 206, 44);
+    padding: 50px;
+    height: 50px;
+
+}
+
+#cabecera div img {
+    padding: 20px;
+    float: left;
+    width: 60px;
+    height: 60px;
+}
+
+#cabecera .titulo {
+    float: left;
+}
+#menu{
+    background-color: aqua;
+    clear: both;
+
+}
+
+#menu li{
+    display: inline-block;
+    list-style: none;
+    padding: 5px;
+    border-right: 1px solid black;
+
+}
+
+#cuerpo {
+    float: left;
+    background-color: orange;
+    margin: 20px;
+    width: 600px;
+    height: 500px;
+
+}
+
+#cuerpo header {
+    background-color: orangered;
+    margin-bottom: 20px;
+
+}
+
+#cuerpo div {
+    background-color: orangered;
+    border-radius: 5px 5px 5px 5px;
+    width: 100%;
+    height: 300px;
+    margin-bottom: 20px;
+
+}
+
+#cuerpo footer {
+    background-color: orangered;
+    margin-top: 20px;
+
+}
+
+#columna {
+    background-color: white;
+    float: right;
+    width: 300px;
+    height: 500px;
+    margin: 20px;
+}
+
+#pie {
+
+}
