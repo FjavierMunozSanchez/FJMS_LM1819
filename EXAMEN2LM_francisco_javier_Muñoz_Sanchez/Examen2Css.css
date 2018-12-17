@@ -1,0 +1,32 @@
+p, span, h1 {
+    
+    font-weight: bold;
+}
+
+#primera {
+
+    width: 50px;
+    height: 50px;
+    background-color: blue;
+}
+
+div p {
+font-style: italic;
+
+}
+
+#capa1 p .encima:hover {
+    background: yellow;
+}
+
+#capa1 .p1::first-letter {
+font-size: 50px;
+}
+
+#enlaces a[href$=".com"] {
+    text-decoration: none
+}
+
+#enlaces * {
+    color: red;
+}
