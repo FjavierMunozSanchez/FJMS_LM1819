@@ -1,0 +1,119 @@
+<html>
+<body>
+<h1>bailes ofertados</h1>
+<table style="border: 1px solid black">
+<tr>
+<th>Nombre</th>
+<th>Profesor</th>
+<th>Plazas</th>
+</tr>
+
+
+<!--Consulta en JQUERY-->
+<!--En el programa Qizx studio para que la consulta funcione hay que ir al xml y segundo 
+    boton en "Use document a Query Domain" -->
+
+<!--Mostrar todos los bailes-->
+
+{
+for $baile in //Bailes/baile
+let $nombre:=$baile/nombre
+let $profesor:=$baile/profesor
+let $plazas:=$baile/plazas
+return
+<tr>
+<td>{data($nombre)}</td>
+<td>{data($profesor)}</td>
+<td>{data($plazas)}</td>
+</tr>
+
+}
+
+<!--Mostrar los Bailes con cuotas trimestral y ordenados de menos a mayor por el numero de plazas-->
+
+{
+    for $baile in //Bailes/baile
+    let $nombre:=$baile/nombre
+    let $profesor:=$baile/profesor
+    let $plazas:=$baile/plazas
+
+    <!--Para mostrar solo la cuota triemstrarl-->
+    where $baile/precio[@cuota="trimestral"]
+
+    <!--Ordenar con order by - descendig y ascending (Predeterminado)-->
+    order by $baile/plazas descending
+
+    return
+    <tr>
+    <td>{data($nombre)}</td>
+    <td>{data($profesor)}</td>
+    <td>{data($plazas)}</td>
+    </tr>
+    
+    }
+
+</table>
+</body>
+</html>
+
+<!--Insertar nodo esto inserta información en el XML-->
+insert node
+<baile id="7">
+<nombre>Foxtrot</nombre>
+<precio cuota="mensual" moneda="dolares">22</precio>
+<plazas>12</plazas>
+<comienzo>01/01/2020</comienzo>
+<fin>01/03/2020</fin>
+<profesor>Freddy</profesor>
+<sala>3</sala>
+</baile>
+before //Bailes/baile[1]
+<!--Para ponerlo el primero usar firts y el ultimo se usa last-->
+as first into //Bailes
+
+<!--Reemplazar dato - replace-->
+<!--[1] Modifica el primer nodo-->
+replace value of node //Bailes/baile[1]/profesor
+with "Profe"
+,
+replace value of node //Bailes/baile[1]/plazas
+with 200
+
+<!--Hacerlo por el id-->
+replace value of node //Bailes/baile[@id=6]/profesor
+with "Profesor"
+,
+replace value of node //Bailes/baile[@id=6]/plazas
+with 4000
+
+<!--Borrado del nodo-->
+
+delete node //Bailes/baile[@id=7]
+
+<!--Consultas cruzadas-->
+
+<!--Obtener los titulos de los libros pretados con sus autores y la fecha de inicio 
+    y debolución del prestamo ordenados por la fecha de inicio del prestamo-->
+
+for $t in doc("Biblioteca.xml")//libro,
+$e in doc("Prestamos.xml")//entrada
+where $t/titulo = $e/titulo
+order by $e/prestamo/inicio
+return
+
+<prestamos>
+{$t/titulo, $t/autor/*, $e/prestamo/inicio, $e/prestamo/devolucion}
+</prestamos>
+
+<!--PREGUNTA 01 XQUERY-->
+
+<!--1. Obtener todos los títulos de los libros cuyo año de publicación sea mayor que 2002 y las páginas sean más de 500-->
+
+for $l in //Biblioteca/libros
+where $l/paginas>500
+where $l/publicacion > 2002
+return $l/titulo
+
+
+
+<!--2. Obtener el nombre del lector de todos los libros prestados cuyo año de publicación es el 2003-->

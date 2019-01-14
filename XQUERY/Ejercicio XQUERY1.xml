@@ -1,0 +1,10 @@
+<!--1. Obtener todos los títulos de los libros cuyo año de publicación sea mayor que 2002 y las páginas sean más de 500-->
+
+for $l in //Biblioteca/libros
+where $l/paginas>500
+where $l/publicacion > 2002
+return $l/titulo
+
+
+
+<!--2. Obtener el nombre del lector de todos los libros prestados cuyo año de publicación es el 2003-->
