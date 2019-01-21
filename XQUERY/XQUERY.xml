@@ -105,7 +105,7 @@ delete node //Bailes/baile[@id=7]
 
 <!--Consultas cruzadas-->
 
-<!--Obtener los titulos de los libros pretados con sus autores y la fecha de inicio 
+<!--Obtener los titulos de los libros prestados con sus autores y la fecha de inicio 
     y debolución del prestamo ordenados por la fecha de inicio del prestamo-->
 
 for $t in doc("Biblioteca.xml")//libro,
@@ -175,7 +175,7 @@ for $libro in //bookstore/book
 order by $libro/@category, $libro/title
 return $libro
 
-<!--Mostrar cuántos libros hay, y etiquetarlo con "total". (count)-->
+<!--Mostrar cuántos libros hay, y etiquetarlo con "total". (COUNT)-->
 
 let $cuantos := count(//bookstore/book)
 return <total>{$cuantos}</total>
@@ -193,7 +193,7 @@ return
  <total>{$total}</total>
  </resultado>
 
- <!--Mostrar el precio mínimo y maximo (max y mi)-->
+ <!--Mostrar el precio mínimo y maximo (max y min)-->
 let $min := min(//bookstore/book/price),
 $max := max(//bookstore/book/price)
 
@@ -202,6 +202,8 @@ return
 <preciomin>{$min}</preciomin>
 <preciomax>{$max}</preciomax>
 </libro>
+
+<!---->
 
 
 <!--Mostrar el título y el número de autores que tiene cada libro en etiquetas diferentes-->
@@ -215,16 +217,74 @@ return
 <Numautores>{$c}</Numautores>
 </resultado>
 
-<!--Mostrar cad uno de los precios de los libros, y al final una nueva etiqueta con la suma de los precios (Función sum())-->
 
-for $titulo in //bookstore/book/title
-let $suma := sum(//bookstore/book/price)
+for $libros in //boockstore/book
+let $cuantos :=count($libros/author)
 
 return
-<resultado>
-<titulo>{$titulo/text()}</titulo>
-<Suma>{$suma}</Suma>
-</resultado>
+
+<libro>
+<titulo>{$libros/title/text()}</titulo>
+<autores>{$cuantos}</autores>
+</libro>
+
+<!--Mostrar cada uno de los precios de los libros, y al final una nueva etiqueta con la suma de los precios (Función sum())-->
+
+let $precios := //bookstore/book/price,
+$sumaprecios := sum($precios)
+
+return
+<listaPrecios>
+{$precios}
+<precioTotal>{$sumaprecios}</precioTotal>
+</listaPrecios>
+
+<!--mostrar en la misma etiqueta el titulo y entre parentesis el numero de autores de ese titulo-->
+
+for $libros in //bookstore/book
+let $titulo := $libros/title/text(),
+$autores :=  count($libros/author)
+
+return
+
+<Libros> {$titulo} ({$autores}) </Libros>
+
+<!--mOSTRAR los libros escritos en años que terminen en "3" (ENDS-WITH)-->
+
+for $libros in /bookstore/book
+where ends-with($libros/year, "3")
+return $libros
+
+<!--Mostrar los libros cuya categoría empieza por "C" (starts-with)-->
+
+for $libros in /bookstore/book[starts-with(@category, "C")]
+return $libros
+
+<!--Mostrar los libros Que tengan una "P" máyuscula o minuscula en el titulo (Lower-case)-->
+
+for $libros in /bookstore/book
+where starts-with($libros/@category, "C")
+and contains(lower-case($libros/title), "p")
+return $libros
+
+<!--Mostrar el tititulo y el numero de caracteres que tiene cada titulo (String-length)-->
+
+for $libros in /bookstore/book/title/text()
+return
+<libros>{$libros} : {(string-length($libros))}</libros>
+
+
+
+
+
+
+
+
+
+
+
+<!--Funciones: https://docs.microsoft.com/es-es/sql/xquery/xquery-functions-against-the-xml-data-type?view=sql-server-2017-->
+
 
 <!--PREGUNTA 01 XQUERY-->
 
