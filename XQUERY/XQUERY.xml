@@ -1,3 +1,5 @@
+<!--http://www.ticarte.com/contenido/ejercicios-practicos-de-xquery-->
+
 <html>
 <body>
 <h1>bailes ofertados</h1>
@@ -83,6 +85,7 @@ insert node
 before //Bailes/baile[1]
 <!--Para ponerlo el primero usar firts y el ultimo se usa last-->
 as first into //Bailes
+as last into //Bailes
 
 <!--Reemplazar dato - replace-->
 <!--[1] Modifica el primer nodo-->
@@ -103,7 +106,7 @@ with 4000
 
 delete node //Bailes/baile[@id=7]
 
-<!--Consultas cruzadas-->
+<!--CONSULTAS CRUZADAS-->
 
 <!--Obtener los titulos de los libros prestados con sus autores y la fecha de inicio 
     y debolución del prestamo ordenados por la fecha de inicio del prestamo-->
@@ -124,7 +127,7 @@ for $tit in //bookstore/book/title/text()
 return <titulo>{$tit}</titulo>
 
 
-<!--Mostrar los libres cuyo precio sea menor o igual 30€-->
+<!--Mostrar los libros cuyo precio sea menor o igual 30€-->
 
 for $libro in //bookstore/book
 where $libro/price <= 30
@@ -152,10 +155,6 @@ return <title>{$libro/title/string()}</title>
 
 for $libro in //bookstore/book[price<=30]
 return <title>{$libro/title/text()}</title>
-
-<!--http://www.ticarte.com/contenido/ejercicios-practicos-de-xquery-->
-
-
 
 <!--Mostrar el título y el autor de los libros del año 2005, y etiquetar cada uno de ellos con "lib2005"-->
 
@@ -204,8 +203,6 @@ return
 </libro>
 
 
-<!---->
-
 <!--Mostrar el título y el número de autores que tiene cada libro en etiquetas diferentes-->
 
 for $libro in //bookstore/book
@@ -249,7 +246,7 @@ return
 
 <Libros> {$titulo} ({$autores}) </Libros>
 
-<!--mOSTRAR los libros escritos en años que terminen en "3" (ENDS-WITH)-->
+<!--Mostrar los libros escritos en años que terminen en "3" (ENDS-WITH)-->
 
 for $libros in /bookstore/book
 where ends-with($libros/year, "3")

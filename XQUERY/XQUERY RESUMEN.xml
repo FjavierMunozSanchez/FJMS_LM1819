@@ -1,0 +1,47 @@
+<!--CONSULTAS: FLWOR-->
+
+<!--Comandos Básicos-->
+
+for: Para crear bucles en el XPath (//direción_del_archivo/etiqueta).
+
+let: Declarar variables
+
+where: Para meter condiciones
+
+order by: para Ordenar
+
+return: devuelve la información.
+
+<!--Consulta en XQUERY-->
+
+<!--En esta consulta vamos a mostrar todos los bailes con cuotas trimestral y ordenados de menos a mayor por el numero de plazas-->
+
+<!--FOR: Esto va a buscar la información repartida por todo el documento en este caso Bailes.xml.-->
+
+for $baile in //Bailes/baile
+
+<!--LET: Declarar variables ($Nombre_Variable :=[Funcion]$Variable o direción archivo ó etiqueta/etiqueta_donde se encuentre el dato).-->
+
+let $nombre:=$baile/nombre
+let $profesor:=$baile/profesor
+let $plazas:=$baile/plazas
+
+<!--WHERE: Condición para mostrar solo la cuota triemstrarl, en este caso buscamos el dato por id (@cuota="trimestral")-->
+
+where $baile/precio[@cuota="trimestral"]
+
+<!--ORDER BY: Ordenar con las funciones descendig ó ascending (Predeterminado)-->
+
+order by $baile/plazas descending
+
+<!--RETURN: Devuelve la información de la consulta.-->
+
+return
+
+<tr>
+    <td>{data($nombre)}</td>
+    <td>{data($profesor)}</td>
+    <td>{data($plazas)}</td>
+</tr>
+
+
