@@ -203,8 +203,8 @@ return
 <preciomax>{$max}</preciomax>
 </libro>
 
-<!---->
 
+<!---->
 
 <!--Mostrar el título y el número de autores que tiene cada libro en etiquetas diferentes-->
 
