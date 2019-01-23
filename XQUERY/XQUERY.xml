@@ -214,6 +214,7 @@ return
 <Numautores>{$c}</Numautores>
 </resultado>
 
+<!--Otra forma-->
 
 for $libros in //boockstore/book
 let $cuantos :=count($libros/author)
