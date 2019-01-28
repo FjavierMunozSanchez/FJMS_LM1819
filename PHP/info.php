@@ -1,0 +1,9 @@
+<body>
+
+<?php
+
+phpinfo();
+
+?>
+
+</body>
