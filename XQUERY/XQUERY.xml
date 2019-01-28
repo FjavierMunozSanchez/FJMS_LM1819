@@ -10,6 +10,22 @@
 <th>Plazas</th>
 </tr>
 
+{
+for $baile in //Bailes/baile
+let $nombre:=$baile/nombre
+let $profesor:=$baile/profesor
+let $plazas:=$baile/plazas
+return
+
+    <tr>
+    <td>{data($nombre)}</td>
+    <td>{data($profesor)}</td>
+    <td>{data($plazas)}</td>
+    </tr>
+}
+</table>
+</body>
+</html>
 
 <!--Comandos Básicos-->
 
@@ -214,6 +230,7 @@ return
 <Numautores>{$c}</Numautores>
 </resultado>
 
+<!--Otra forma-->
 
 for $libros in //boockstore/book
 let $cuantos :=count($libros/author)
