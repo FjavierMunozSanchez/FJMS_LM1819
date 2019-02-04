@@ -150,8 +150,9 @@ echo "<br>Mensaje: <b>" . $saludos . "</b>. Fin Mensaje</br>";
 shuffle($numeros);
 print_r($numeros);
 
-
+//---------------------------
 //Sacar elementos aleatorios de la tabla
+//------------------------------
 
 //Posision
 echo array_rand($numeros);
