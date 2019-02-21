@@ -18,7 +18,7 @@ echo "1. Desarrolle un ejercicio que muestre las tablas de multiplicar";
 echo "</br>";
 
 $num1=1;
-while($num1<=10)
+while($num1<=100)
 {
 echo "<table style='border: 1px solid black; float: left'>";
 echo "<tr align=center><td colspan=5>Tabla de multiplicar del ".$num1.":</td></tr>";
