@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>INSERT</title>
+        <title>MODIFICAR</title>
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <!-- Bootstrap CSS -->
         <link rel="stylesheet"
@@ -25,8 +25,8 @@
                 or die("Problemas de conexión");
                 
             mysqli_query($conexion, 
-                "INSERT INTO estaciones(Marca, Modelo, IP, Tipo_Conex, Ubi) VALUES ('$marca','$modelo', '$ip', '$tipoc', '$ubi')")
-                or die("Problemas en el insert".mysqli_error($conexion));
+                "UPDATE estaciones SET Marca = '$marca', Modelo = '$modelo',IP = '$ip', Tipo_Conex = '$tipoc', Ubi = '$ubi' WHERE Id = 40")
+                or die("Problemas en el UPDATE".mysqli_error($conexion));
 
         
             mysqli_close($conexion);
