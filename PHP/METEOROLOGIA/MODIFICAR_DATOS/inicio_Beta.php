@@ -111,19 +111,17 @@
                         echo "<td>" . $reg['IP'] . "</td>";
                         echo "<td>" . $reg['Tipo_Conex'] . "</td>";
                         echo "<td>" . $reg['Ubi'] . "</td>";
+                        //BOTON BORRAR
                         echo "<td>";
-                        echo "<button type='button' class='btn btn-danger' data-toggle='modal' data-target='#borrar<?php $reg[Id]?>'>";
-                        echo "Borrar";
-                        //DIV MODAL
-                        echo "<div>";
-                        echo "<form action='m_file\delete.php' method='post'>";
-                        echo "<div class='modal fade' id="borrar' tabindex='-1' role='dialog' aria-labelledby='exampleModalLabel' aria-hidden='true'>";
+                        echo "<button type='button' class='btn btn-danger' data-toggle='modal' data-target='#borrar$reg[Id]'>Borrar</button>";
+                        //DIV MODAL BORRAR
+                        echo "<div class='modal fade' id='borrar$reg[Id]' tabindex='-1' role='dialog' aria-labelledby='exampleModalLabel' aria-hidden='true'>";
                         echo   "<div class='modal-dialog' role='document'>";
-                        echo     "<div class='modal-content'>';
-                        echo       "<div class='modal-header'>';
+                        echo     "<div class='modal-content'>";
+                        echo       "<div class='modal-header'>";
                         echo         "<h5 class='modal-title' id='borrar'>BORRAR</h5>";
                         echo         "<button type='button' class='close' data-dismiss='modal' aria-label='Close'>";
-                        echo           "<span aria-hidden="true">&times;</span>";
+                        echo           "<span aria-hidden='true'>&times;</span>";
                         echo         "</button>";
                         echo       "</div>";
                         echo       "<div class='modal-body'>";
@@ -132,17 +130,14 @@
                         echo       "<div class='modal-footer'>";
                         echo         "<button type='button' class='btn btn-secondary' data-dismiss='modal'>CERRAR</button>";
                         //<!--FORMULARIO BORRAR-->;
-                        echo         "<form action='m_file\delete.php' method='post'>";
-                        echo         "<input type='submit' class='btn btn-danger' value='BORRAR'>";
-                        echo         "</form>";
+                        echo         "<a href='m_file/delete.php?id=$reg[Id]' class='btn btn-danger' id='ids'>BORRAR</a>";
                         echo       "</div>";
                         echo     "</div>";
                         echo   "</div>";
                         echo "</div>";
-                        echo </form>;
-                        echo "</div>";
-                        echo "</button>";
+                        echo "";
                         echo "</td>";
+                        //FIN MODAL BORRAR
                         echo "<td>";
                         echo "<button type='button' class='btn btn-warning' data-toggle='modal' data-target='#modificar'>";
                         echo "Modificar";
