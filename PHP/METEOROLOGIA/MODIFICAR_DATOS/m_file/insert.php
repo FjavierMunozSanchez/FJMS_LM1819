@@ -31,7 +31,7 @@
         
             mysqli_close($conexion);
         //HEADER QUE MANDA UN MENSAJE A inicio.php
-            header('location: ..\inicio.php?insertar=ESTACIÓN AGREGADA');
+            header('location: ..\inicio_Beta.php?insertar=ESTACIÓN AGREGADA');
             
             ?>
         </div>

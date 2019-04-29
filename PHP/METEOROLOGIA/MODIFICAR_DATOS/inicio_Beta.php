@@ -138,20 +138,72 @@
                         echo "";
                         echo "</td>";
                         //FIN MODAL BORRAR
-                        echo "<td>";
-                        echo "<button type='button' class='btn btn-warning' data-toggle='modal' data-target='#modificar'>";
-                        echo "Modificar";
-                        echo "</button>";
-                        echo "</td>";
-                    echo "</tr>";
+
+                        //BOTON MODIFICAR
+                        print "<td>";
+                        print "<button type='button' class='btn btn-warning' data-toggle='modal' data-target='#modificar'>";
+                        print "Modificar";
+                        print "</button>";
+                      //MODAL MODIFICAR
+                        print "<div class='modal fade' id='modificar' tabindex='-1' role='dialog' aria-labelledby='exampleModalLabel' aria-hidden='true'>";
+                        print "<div class='modal-dialog' role='document'>";
+
+                        print  "<div class='modal-content'>";
+                        print  "<div class='modal-header'>";
+                        print  "<h5 class='modal-title' id='modificar'>MODIFICAR ESTACIÓN</h5>";
+                        print  "<button type='button' class='close' data-dismiss='modal' aria-label='Close'>";
+                        print  "<span aria-hidden='true'>&times;</span>";
+                        print  "</button>";
+                        print  "</div>";
+                        print  "<div class='modal-body'>";
+                        //TABLA MODIFICAR
+                        print  "<form action='m_file\update.php' method='post'>";
+                        print         "<div class='form-group'>";
+                        print              "<label for='imarca'>MARCA</label>";
+                        print              "<input type='text' class='form-control' name='imarca' id='imarca?$reg[Marca]&' required>";
+                        print          "</div>";
+                        print          "<div class='form-group'>";
+                        print              "<label for='imodelo'>MODELO</label>";
+                        print              "<input type='text' class='form-control' name='imodelo' id='imodelo?$reg[Modelo]' required>";
+                        print          "</div>";
+                  
+                        print          "<div class='form-group'>";
+                        print              "<label for='iip'>IP</label>";
+                        print              "<input type='text' class='form-control' name='iip' id='iip?$reg[IP]' required>";
+                        print          "</div>";
+                        print          
+                        print          "<div class='form-group'>";
+                        print              "<label for='iticon'>TIPO DE CONEXIÓN</label>";
+                        print              "<input type='text' class='form-control' name='iticon' id='iticon?$reg[Tipo_Conex]' required>";
+                        print          "</div>";
+                  
+                        print          "<div class='form-group'>";
+                        print              "<label for='iubi'>UBICACIÓN</label>";
+                        print              "<input type='text' class='form-control' name='iubi' id='iubi?$reg[Ubi]' required>";
+                        print          "</div>";
+                  
+                        print          "<p>";
+                        print              "<input type='submit' class='btn btn-primary btn-block' value='MODIFICAR'>";
+                        print          "</p>";
+                        print      "</form>";
+                        print"</div>";
+                        print"<div class='modal-footer'>";
+                        print  "<button type='button' class='btn btn-secondary' data-dismiss='modal'>CERRAR</button>";
+                        print"</div>";
+                        print"</div>";
+                        print"</div>";
+                        print"</div>";
+   
+                        print "</td>";
+                        print "</tr>";
                 }
             echo "</table>";
             mysqli_close($conexion);
         ?>
 </div>
 <!--MODIFICAR-->
-
-<div class="modal fade" id="modificar" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<!--
+<div class="modal fade" id="modificar?$reg[Marca]&$reg[Modelo]&$reg[IP]" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
@@ -161,7 +213,7 @@
         </button>
       </div>
       <div class="modal-body">
-          <!--FORMULARIO-->
+          <!--FORMULARIO
       <form action="m_file\update.php" method="post">
                 <div class="form-group">
                     <label for="imarca">MARCA</label>
@@ -188,7 +240,7 @@
                 </div>
 
                 <p>
-                    <input type="submit" class="btn btn-primary btn-block" value="Insertar">
+                    <input type="submit" class="btn btn-primary btn-block" value="MODIFICAR">
                 </p>
             </form>
       </div>
@@ -198,9 +250,7 @@
     </div>
   </div>
 </div>
-
-<!--MODAL BORRAR-->
-
+              -->
     
   <!--FIN CONTAINER-->  
     </div>
