@@ -10,16 +10,16 @@
 </head>
 <body style="padding-top:50px">
     <div class="container">
-<div class="bg-warning text-dark" style="position:absolute;left:0px; top: 0px; z-index:1; width: 100%">
+<div class="bg-warning text-dark" style="position:absolute;left:0px; top: 0px; z-index:1; width: 100%; border-radius: 0px 0px 15px 15px">
   <h3>ESTACIONES</h3>
 </div>
 
 <!--ESTE MENSAJE LLEGA DEL HEADER DEL ARCHIVO insert.php-->
 <div>
 <?php
-        if (isset($_REQUEST["insertar"])) {
+        if (isset($_REQUEST["mensaje"])) {
           echo "<div class='alert alert-warning alert-dismissible fade show' role='alert'>
-          <strong>$_REQUEST[insertar]</strong>
+          <strong>$_REQUEST[mensaje]</strong>
           <button type='button' class='close' data-dismiss='alert' aria-label='Close'>
             <span aria-hidden='true'>&times;</span>
           </button>
@@ -171,7 +171,6 @@
                         print              "<label for='iip'>IP</label>";
                         print              "<input type='text' class='form-control' name='iip' id='iip?$reg[IP]' required>";
                         print          "</div>";
-                        print          
                         print          "<div class='form-group'>";
                         print              "<label for='iticon'>TIPO DE CONEXIÓN</label>";
                         print              "<input type='text' class='form-control' name='iticon' id='iticon?$reg[Tipo_Conex]' required>";
