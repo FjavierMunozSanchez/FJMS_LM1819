@@ -6,11 +6,14 @@
     <title>ESTACIONES</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="../recursos/bootstrap/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 </head>
 <body style="padding-top:50px">
     <div class="container">
 <div class="bg-warning text-dark" style="position:absolute;left:0px; top: 0px; z-index:1; width: 100%; border-radius: 0px 0px 15px 15px">
+<div style="float: left;">
+<a href="#" class="btn btn-success" tabindex="-1" role="button" aria-disabled="true">RETROCEDER</a>
+</div>
   <h3>ESTACIONES</h3>
 </div>
 
@@ -45,7 +48,7 @@
       </div>
       <div class="modal-body">
           <!--FORMULARIO-->
-      <form action="m_file\insert.php" method="post">
+      <form action="m_file/estaciones/insert.php" method="post">
                 <div class="form-group">
                     <label for="imarca">MARCA</label>
                     <input type="text" class="form-control" name="imarca" id="imarca" required>
@@ -130,7 +133,7 @@
                         echo       "<div class='modal-footer'>";
                         echo         "<button type='button' class='btn btn-secondary' data-dismiss='modal'>CERRAR</button>";
                         //<!--FORMULARIO BORRAR-->;
-                        echo         "<a href='m_file/delete.php?id=$reg[Id]' class='btn btn-danger' id='ids'>BORRAR</a>";
+                        echo         "<a href='m_file/estaciones/delete.php?id=$reg[Id]' class='btn btn-danger' id='ids'>BORRAR</a>";
                         echo       "</div>";
                         echo     "</div>";
                         echo   "</div>";
@@ -141,11 +144,11 @@
 
                         //BOTON MODIFICAR
                         print "<td>";
-                        print "<button type='button' class='btn btn-warning' data-toggle='modal' data-target='#modificar'>";
+                        print "<button type='button' class='btn btn-warning' data-toggle='modal' data-target='#modificar$reg[Id]'>";
                         print "Modificar";
                         print "</button>";
                       //MODAL MODIFICAR
-                        print "<div class='modal fade' id='modificar' tabindex='-1' role='dialog' aria-labelledby='exampleModalLabel' aria-hidden='true'>";
+                        print "<div class='modal fade' id='modificar$reg[Id]' tabindex='-1' role='dialog' aria-labelledby='exampleModalLabel' aria-hidden='true'>";
                         print "<div class='modal-dialog' role='document'>";
 
                         print  "<div class='modal-content'>";
@@ -157,28 +160,29 @@
                         print  "</div>";
                         print  "<div class='modal-body'>";
                         //TABLA MODIFICAR
-                        print  "<form action='m_file\update.php' method='post'>";
+                        //Esta línea esta haciendo referencia al id de la fila del regristro -update.php?id=$reg[Id]-
+                        print  "<form action='m_file/estaciones/update.php?id=$reg[Id]' method='post'>";
                         print         "<div class='form-group'>";
-                        print              "<label for='imarca'>MARCA</label>";
-                        print              "<input type='text' class='form-control' name='imarca' id='imarca?$reg[Marca]&' required>";
+                        print              "<label for='mmarca'>MARCA</label>";
+                        print              "<input type='text' class='form-control' name='mmarca' id='mmarca?$reg[Marca]&' required>";
                         print          "</div>";
                         print          "<div class='form-group'>";
-                        print              "<label for='imodelo'>MODELO</label>";
-                        print              "<input type='text' class='form-control' name='imodelo' id='imodelo?$reg[Modelo]' required>";
-                        print          "</div>";
-                  
-                        print          "<div class='form-group'>";
-                        print              "<label for='iip'>IP</label>";
-                        print              "<input type='text' class='form-control' name='iip' id='iip?$reg[IP]' required>";
-                        print          "</div>";
-                        print          "<div class='form-group'>";
-                        print              "<label for='iticon'>TIPO DE CONEXIÓN</label>";
-                        print              "<input type='text' class='form-control' name='iticon' id='iticon?$reg[Tipo_Conex]' required>";
+                        print              "<label for='mmodelo'>MODELO</label>";
+                        print              "<input type='text' class='form-control' name='mmodelo' id='mmodelo?$reg[Modelo]' required>";
                         print          "</div>";
                   
                         print          "<div class='form-group'>";
-                        print              "<label for='iubi'>UBICACIÓN</label>";
-                        print              "<input type='text' class='form-control' name='iubi' id='iubi?$reg[Ubi]' required>";
+                        print              "<label for='mip'>IP</label>";
+                        print              "<input type='text' class='form-control' name='mip' id='mip?$reg[IP]' required>";
+                        print          "</div>";
+                        print          "<div class='form-group'>";
+                        print              "<label for='mticon'>TIPO DE CONEXIÓN</label>";
+                        print              "<input type='text' class='form-control' name='mticon' id='mticon?$reg[Tipo_Conex]' required>";
+                        print          "</div>";
+                  
+                        print          "<div class='form-group'>";
+                        print              "<label for='mubi'>UBICACIÓN</label>";
+                        print              "<input type='text' class='form-control' name='mubi' id='mubi?$reg[Ubi]' required>";
                         print          "</div>";
                   
                         print          "<p>";
@@ -200,56 +204,6 @@
             mysqli_close($conexion);
         ?>
 </div>
-<!--MODIFICAR-->
-<!--
-<div class="modal fade" id="modificar?$reg[Marca]&$reg[Modelo]&$reg[IP]" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="modificar">MODIFICAR ESTACIÓN</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body">
-          <!--FORMULARIO
-      <form action="m_file\update.php" method="post">
-                <div class="form-group">
-                    <label for="imarca">MARCA</label>
-                    <input type="text" class="form-control" name="imarca" id="imarca" required>
-                </div>
-                <div class="form-group">
-                    <label for="imodelo">MODELO</label>
-                    <input type="text" class="form-control" name="imodelo" id="imodelo" required>
-                </div>
-
-                <div class="form-group">
-                    <label for="iip">IP</label>
-                    <input type="text" class="form-control" name="iip" id="iip" required>
-                </div>
-                
-                <div class="form-group">
-                    <label for="iticon">TIPO DE CONEXIÓN</label>
-                    <input type="text" class="form-control" name="iticon" id="iticon" required>
-                </div>
-
-                <div class="form-group">
-                    <label for="iubi">UBICACIÓN</label>
-                    <input type="text" class="form-control" name="iubi" id="iubi" required>
-                </div>
-
-                <p>
-                    <input type="submit" class="btn btn-primary btn-block" value="MODIFICAR">
-                </p>
-            </form>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">CERRAR</button>
-      </div>
-    </div>
-  </div>
-</div>
-              -->
     
   <!--FIN CONTAINER-->  
     </div>

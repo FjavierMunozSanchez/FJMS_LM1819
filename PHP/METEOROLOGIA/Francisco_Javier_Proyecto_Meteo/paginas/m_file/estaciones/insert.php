@@ -1,5 +1,4 @@
 
-        <div class="container">
             <?php
             $marca = trim(htmlspecialchars($_REQUEST["imarca"], ENT_QUOTES, "UTF-8"));
             $modelo = trim(htmlspecialchars($_REQUEST["imodelo"], ENT_QUOTES, "UTF-8"));
@@ -12,12 +11,12 @@
                 or die("Problemas de conexión");
                 
             mysqli_query($conexion, 
-                "UPDATE estaciones SET Marca = '$marca', Modelo = '$modelo',IP = '$ip', Tipo_Conex = '$tipoc', Ubi = '$ubi'")
-                or die("Problemas en el UPDATE".mysqli_error($conexion));
+                "INSERT INTO estaciones(Marca, Modelo, IP, Tipo_Conex, Ubi) VALUES ('$marca','$modelo', '$ip', '$tipoc', '$ubi')")
+                or die("Problemas en el insert".mysqli_error($conexion));
 
         
             mysqli_close($conexion);
         //HEADER QUE MANDA UN MENSAJE A inicio.php
-            header('location: ..\inicio_Beta.php?mensaje=ESTACIÓN ACTUALIZADA');
+            header('location: ../../estaciones.php?mensaje=ESTACIÓN AGREGADA');
             
             ?>
